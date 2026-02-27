@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Calculator from "./pages/Calculator";
+import CalculatorNormal from "./pages/CalculatorNormal";
 import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
 import { AuthProvider } from "./contexts/AuthContext";
@@ -29,6 +30,11 @@ const App = () => (
             <Route path="/calculator" element={
               <ProtectedRoute>
                 <Calculator />
+              </ProtectedRoute>
+            } />
+            <Route path="/calculator-normal" element={
+              <ProtectedRoute>
+                <CalculatorNormal />
               </ProtectedRoute>
             } />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
