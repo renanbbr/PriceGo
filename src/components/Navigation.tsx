@@ -12,8 +12,13 @@ const Navigation = () => {
       icon: Package,
     },
     {
-      name: "Calculadora de Taxas",
+      name: "Calculadora Seal Club",
       path: "/calculator",
+      icon: Calculator,
+    },
+    {
+      name: "Calculadora Normal",
+      path: "/calculator-normal",
       icon: Calculator,
     },
   ];
