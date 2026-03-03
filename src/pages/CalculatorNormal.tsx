@@ -73,6 +73,9 @@ const CalculatorNormal = () => {
 
   const handleCopy = () => {
     const productFullName = `${productName || "Produto"} ${storage || ""} ${condition}`.replace(/\s+/g, " ").trim();
+    const warrantyMessage = condition === "Novo"
+      ? "1 ano de garantia pela Apple"
+      : "1 ano de garatia pela Seal";
 
     const buildMessage = (valueLine: string, contextLine?: string) => {
       let text = `📱${productFullName}\n\n`;
@@ -82,7 +85,7 @@ const CalculatorNormal = () => {
       }
 
       text += `${valueLine}\n\n`;
-      text += "1 ano de garantia pela Seal";
+      text += warrantyMessage;
 
       return text;
     };
